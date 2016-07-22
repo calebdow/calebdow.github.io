@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="stylesheet" rel="stylesheet" type="text/css" />
+    <img src="https://www.strausscenter.org/images/footer_logo/StraussLogo.gif" id="strauss">
+    <h1> CEPSA Coding Page </h1>
+    <title>Read File (via User Input selection)</title>
+        <ul id=list>
+          <li><input type='button' onclick= 'CountWords()' value='1'></li>
+          <li><input type='button' onclick= 'CountWordsPlan()' value='2'></li>
+          <li><input type='button' onclick= 'findSentence()' value='3'></li>
+          <li><input type='button' onclick= 'changeText()' value='4'></li>
+          <li><input type='button' onclick= 'windowFind()' value='5'></li>
+          <li><input type='button' onclick= 'findSentence()' value='6'></li>
+          <li><input type='button' onclick= 'changeText()' value='7'></li>
+          <li><input type='button' onclick= 'windowFind()' value='8'></li>
+          <li><input type='button' onclick= 'findSentence()' value='9'></li>
+          <li><input type='button' onclick= 'changeText()' value='10'></li>
+          <li><input type='button' onclick= 'windowFind()' value='11'></li>
+          <li><input type='button' onclick= 'findSentence()' value='12'></li>
+          <li><input type='button' onclick= 'changeText()' value='13'></li>
+          <li><input type='button' onclick= 'windowFind()' value='14'></li>
+          <li><input type='button' onclick= 'findSentence()' value='15'></li>
+          <li><input type='button' onclick= 'changeText()' value='16'> </li>
+        </ul>
+        <ul id='listone'>
+        <li><input type='button' onclick= 'windowFind()' value='1a'></li>
+          <li><input type='button' onclick= 'windowFindPlan()' value='2a'></li>
+          <li><input type='button' onclick= 'findSentence()' value='3a'></li>
+          <li><input type='button' onclick= 'changeText()' value='4a'></li>
+          <li><input type='button' onclick= 'windowFind()' value='5a'></li>
+          <li><input type='button' onclick= 'findSentence()' value='6a'></li>
+          <li><input type='button' onclick= 'changeText()' value='7a'></li>
+          <li><input type='button' onclick= 'windowFind()' value='8a'></li>
+          <li><input type='button' onclick= 'findSentence()' value='9a'></li>
+          <li><input type='button' onclick= 'changeText()' value='10a'></li>
+          <li><input type='button' onclick= 'windowFind()' value='11a'></li>
+          <li><input type='button' onclick= 'findSentence()' value='12a'></li>
+          <li><input type='button' onclick= 'changeText()' value='13a'></li>
+          <li><input type='button' onclick= 'windowFind()' value='14a'></li>
+          <li><input type='button' onclick= 'findSentence()' value='15a'></li>
+          <li><input type='button' onclick= 'changeText()' value='16a'> </li>
+        </ul>
+        <ul id='listwo'>
+          <li><input type='button' onclick= 'changeText()' value='Bangladesh Locations'></li>
+          <li><input type='button' onclick= 'windowFind()' value='Vietnam Locations'></li>
+          <li><input type='button' onclick= 'findSentence()' value='Laos Locations'></li>
+
+        </ul>
+        
+    <script type="text/javascript">
+    alert ("Upload your text file on the page and then click through the buttons below to search your text for all of the CEPSA key words")
+   
+    var reader; //GLOBAL File Reader object for demo purpose only
+
+    /**
+     * Check for the various File API support.
+     */
+    function checkFileAPI() {
+        if (window.File && window.FileReader && window.FileList && window.Blob) {
+            reader = new FileReader();
+            return true; 
+        } else {
+            alert('The File APIs are not fully supported by your browser. Fallback required.');
+            return false;
+        }
+    }
+
+    /**
+     * read text input
+     */
+    function readText(filePath) {
+        var output = ""; //placeholder for text output
+        if(filePath.files && filePath.files[0]) {           
+            reader.onload = function (e) {
+                output = e.target.result;
+                displayContents(output);
+            };//end onload()
+            reader.readAsText(filePath.files[0]);
+        }//end if html5 filelist support
+        else if(ActiveXObject && filePath) { //fallback to IE 6-8 support via ActiveX
+            try {
+                reader = new ActiveXObject("Scripting.FileSystemObject");
+                var file = reader.OpenTextFile(filePath, 1); //ActiveX File Object
+                output = file.ReadAll(); //text contents of file
+                file.Close(); //close file "input stream"
+                displayContents(output);
+            } catch (e) {
+                if (e.number == -2146827859) {
+                    alert('Unable to access local files due to browser security settings. ' + 
+                     'To overcome this, go to Tools->Internet Options->Security->Custom Level. ' + 
+                     'Find the setting for "Initialize and script ActiveX controls not marked as safe" and change it to "Enable" or "Prompt"'); 
+                }
+            }       
+        }
+        else { //this is where you could fallback to Java Applet, Flash or similar
+            return false;
+        }       
+        return true;
+    }   
+
+    /**
+     * display content using a basic HTML replacement
+     */
+    function displayContents(txt) {
+        var el = document.getElementById('main'); 
+        el.innerHTML = txt; //display output in DOM
+    }   
+
+var text = document.getElementById('main').innerHTML
+    function CountWords() {
+        //alert("We will start by highlighting all the required search terms then we will being our search by looking for the instances of the word 'program'")
+        var text = document.getElementById('main').innerHTML;
+            var count = (text.match(/pilot/gi) || []).length;
+                alert ("the word pilot occured " + count + " times.")
+     };
+    function windowFind() { 
+            ("Find ->  are = " + window.find("pilot"))}
+
+    
+    function CountWordsPlan() {
+        //alert("We will start by highlighting all the required search terms then we will being our search by looking for the instances of the word 'program'")
+        var text = document.getElementById('main').innerHTML;
+            var count = (text.match(/plan/gi) || []).length;
+                alert ("the word plan occured " + count + " times.")
+     };
+    function windowFindPlan() { 
+        ("Find ->  are = " + window.find("plan"))
+        ("Find ->  are = " + window.find("feasib"))}
+
+    
+
+
+    function changeText(){
+            var pilotProject = (/piloted|pilot|piloting|project/gi)
+            var count = (text.match(pilotProject) || []).length;
+                alert ("The word pilot occured " + count + " times. And they are highlighted below ")
+            var feasible = (/feasible|feasibility|planning/gi)
+            var count = (text.match(feasible) || []).length;
+                alert ("The word feasible occured " + count + " times.")
+                    
+            var count = (text.match(/adapt/g) || []).length;
+                alert ("The word adapt occured " + count + " times.")
+            }
+
+    
+     
+
+</script>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body onload="checkFileAPI();">
+    <div id="container">    
+        <input type="file" onchange='readText(this)' />
+        <br/>
+        <hr/>   
+        <h3>Here is your file to code:</h3>
+        <div id="main">
+            ...
+        </div>
+    </div>
+</body>      
+<h3> <a href = "http://pdftotext.com/"target="_blank"> Follow this link to convert your PDF file to text </a></h3>
+<h3> <a href = "https://www.strausscenter.org/cepsa/about.html"target="_blank"> Click here for more information on our methodology </a></h3>
+</html>
