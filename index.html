@@ -109,15 +109,18 @@
 
 var text = document.getElementById('main').innerHTML
     function CountWords() {
-        //alert("We will start by highlighting all the required search terms then we will being our search by looking for the instances of the word 'program'")
+        alert("We will start by highlighting all the required search terms then we will being our search by looking for the instances of the word 'program'")
         var text = document.getElementById('main').innerHTML;
             var count = (text.match(/pilot/gi) || []).length;
                 alert ("the word pilot occured " + count + " times.")
      };
-    function windowFind() { 
-            ("Find ->  are = " + window.find("pilot"))}
-
     
+      function windowFind(){
+        var pilotWords = ["pilot","project"];
+        for (var i = 0; i < pilotWords.length; i++) {
+            ("Find ->  are = " + window.find(pilotWords[i]))}
+}
+
     function CountWordsPlan() {
         //alert("We will start by highlighting all the required search terms then we will being our search by looking for the instances of the word 'program'")
         var text = document.getElementById('main').innerHTML;
@@ -127,9 +130,6 @@ var text = document.getElementById('main').innerHTML
     function windowFindPlan() { 
         ("Find ->  are = " + window.find("plan"))
         ("Find ->  are = " + window.find("feasib"))}
-
-    
-
 
     function changeText(){
             var pilotProject = (/piloted|pilot|piloting|project/gi)
