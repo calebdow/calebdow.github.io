@@ -114,15 +114,11 @@ var text = document.getElementById('main').innerHTML
                 alert ("the word pilot occured " + count + " times.")
      };
     
-   var wordIndex = 0;
-    function windowFind(){
+        function windowFind(){
         var pilotWords = ["pilot","project"];
-        (window.find(pilotWords[wordIndex]));
-        if( wordIndex + 1 == pilotWords.length )
-            wordIndex = 0;
-         else
-            wordIndex++;
-    };
+        for (var i = 0; i < pilotWords.length; i++) {
+            ("Find ->  are = " + window.find(pilotWords[i]))}
+      }
 
     function CountWordsPlan() {
         //alert("We will start by highlighting all the required search terms then we will being our search by looking for the instances of the word 'program'")
