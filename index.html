@@ -114,10 +114,14 @@ var text = document.getElementById('main').innerHTML
                 alert ("the word pilot occured " + count + " times.")
      };
     
-      function windowFind(){
+       function windowFind(){
         var pilotWords = ["pilot","project"];
-        for (var i = 0; i < pilotWords.length; i++) {
-            (window.find(pilotWords[i]))}
+        //for (var i = 0; i < pilotWords.length; i++) {
+        //{
+            var regexFind = new RegExp( pilotWords[0] + '|' + pilotWords[1], 'gi' )
+            (window.find( regexFind ) );
+        //}
+
 }
 
     function CountWordsPlan() {
