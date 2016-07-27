@@ -25,13 +25,13 @@
         </ul>
         <ul id='listwo'>
           <li><input type='button' onclick= 'bangLoc()' value='Bangladesh Locations'></li>
-          <li><input type='button' onclick= 'bangLoc()' value='Vietnam Locations'></li>
-          <li><input type='button' onclick= 'bangLoc()' value='Laos Locations'></li>
+          <li><input type='button' onclick= 'otherLoc()' value='Vietnam Locations'></li>
+          <li><input type='button' onclick= 'otherLoc()' value='Laos Locations'></li>
 
         </ul>
         
     <script type="text/javascript">
-    alert ("Upload your text file on the page and then click through the buttons below to search your text for all of the CEPSA key words")
+    alert ("Upload your text file on the page and then click through the buttons below to search your text for all of the CEPSA key words. These features are all still under testing, so please be patient.")
    
     var reader; //GLOBAL File Reader object for demo purpose only
 
@@ -169,10 +169,17 @@
             }
 
     function bangLoc(){
-            alert ("location search feature coming soon")
-    }
-     
-
+            alert ("I only search for 150 cities and am slow but I'll do the job. Wait at least a minute before refreshing the screen")
+            var text = document.getElementById('main').innerHTML
+            var BangCity = (/[A-Z][^\\.;]*(Dhaka)[^\\.;]*|[A-Z][^\\.;]*(Chattagam)[^\\.;]*|[A-Z][^\\.;]*(Dhaka)[^\\.;]*|[A-Z][^\\.;]*(Chattagam)[^\\.;]*|[A-Z][^\\.;]*(Khulna)[^\\.;]*|[A-Z][^\\.;]*(Rajshahi)[^\\.;]*|[A-Z][^\\.;]*(Maimansingh)[^\\.;]*|[A-Z][^\\.;]*(Tungi)[^\\.;]*|[A-Z][^\\.;]*(Komilla)[^\\.;]*|[A-Z][^\\.;]*(Silhat)[^\\.;]*|[A-Z][^\\.;]*(Rangpur)[^\\.;]*|[A-Z][^\\.;]*(Barisal)[^\\.;]*|[A-Z][^\\.;]*(Narsingdi)[^\\.;]*|[A-Z][^\\.;]*(Narayanganj)[^\\.;]*|[A-Z][^\\.;]*(Bogora)[^\\.;]*|[A-Z][^\\.;]*(Jessor)[^\\.;]*|[A-Z][^\\.;]*(Brahman bariya)[^\\.;]*|[A-Z][^\\.;]*(Dinajpur)[^\\.;]*|[A-Z][^\\.;]*(Pabna)[^\\.;]*|[A-Z][^\\.;]*(Nawabganj)[^\\.;]*|[A-Z][^\\.;]*(Tangayal)[^\\.;]*|[A-Z][^\\.;]*(Jamalpur)[^\\.;]*|[A-Z][^\\.;]*(Naugaon)[^\\.;]*|[A-Z][^\\.;]*(Sirajganj)[^\\.;]*|[A-Z][^\\.;]*(Gazipur)[^\\.;]*|[A-Z][^\\.;]*(Chandpur)[^\\.;]*|[A-Z][^\\.;]*(Begamganj)[^\\.;]*|[A-Z][^\\.;]*(Kushtiya)[^\\.;]*|[A-Z][^\\.;]*(Chuadanga)[^\\.;]*|[A-Z][^\\.;]*(Koks bazar)[^\\.;]*|[A-Z][^\\.;]*(Noakhali)[^\\.;]*|[A-Z][^\\.;]*(Satkhira)[^\\.;]*|[A-Z][^\\.;]*(Gaybanda)[^\\.;]*|[A-Z][^\\.;]*(Munshiganj)[^\\.;]*|[A-Z][^\\.;]*(Faridpur)[^\\.;]*|[A-Z][^\\.;]*(Ishurdi)[^\\.;]*|[A-Z][^\\.;]*(Bhairab bazar)[^\\.;]*|[A-Z][^\\.;]*(Kaunia)[^\\.;]*|[A-Z][^\\.;]*(Nator)[^\\.;]*|[A-Z][^\\.;]*(Shahjadpur)[^\\.;]*|[A-Z][^\\.;]*(Sherpur)[^\\.;]*|[A-Z][^\\.;]*(Bhola)[^\\.;]*|[A-Z][^\\.;]*(Jhanaydah)[^\\.;]*|[A-Z][^\\.;]*(Kishorganj)[^\\.;]*|[A-Z][^\\.;]*(Kurigram)[^\\.;]*|[A-Z][^\\.;]*(Rupganj)[^\\.;]*|[A-Z][^\\.;]*(Ramgati)[^\\.;]*|[A-Z][^\\.;]*(Boalkhali)[^\\.;]*|[A-Z][^\\.;]*(Habiganj)[^\\.;]*|[A-Z][^\\.;]*(Alamdanga)[^\\.;]*|[A-Z][^\\.;]*(Sarishabari)[^\\.;]*|[A-Z][^\\.;]*(Mungla)[^\\.;]*|[A-Z][^\\.;]*(Laksham)[^\\.;]*|[A-Z][^\\.;]*(Feni)[^\\.;]*|[A-Z][^\\.;]*(Madaripur)[^\\.;]*|[A-Z][^\\.;]*(Manikganj)[^\\.;]*|[A-Z][^\\.;]*(Fulbaria)[^\\.;]*|[A-Z][^\\.;]*(Patuakhali)[^\\.;]*|[A-Z][^\\.;]*(Gopalpur)[^\\.;]*|[A-Z][^\\.;]*(Kaptai)[^\\.;]*|[A-Z][^\\.;]*(Netrakona)[^\\.;]*|[A-Z][^\\.;]*(Lalmanir hat)[^\\.;]*|[A-Z][^\\.;]*(Jaipur hat)[^\\.;]*|[A-Z][^\\.;]*(Raypur)[^\\.;]*|[A-Z][^\\.;]*(Thakurgaon)[^\\.;]*|[A-Z][^\\.;]*(Bagar hat)[^\\.;]*|[A-Z][^\\.;]*(Sunamganj)[^\\.;]*|[A-Z][^\\.;]*(Damurhuda)[^\\.;]*|[A-Z][^\\.;]*(Rajbari)[^\\.;]*|[A-Z][^\\.;]*(Lakshmipur)[^\\.;]*|[A-Z][^\\.;]*(Rangamati)[^\\.;]*|[A-Z][^\\.;]*(Sarail)[^\\.;]*|[A-Z][^\\.;]*(Magura)[^\\.;]*|[A-Z][^\\.;]*(Sandip)[^\\.;]*|[A-Z][^\\.;]*(Satkaniya)[^\\.;]*|[A-Z][^\\.;]*(Patiya)[^\\.;]*|[A-Z][^\\.;]*(Ramganj)[^\\.;]*|[A-Z][^\\.;]*(Pirojpur)[^\\.;]*|[A-Z][^\\.;]*(Palang)[^\\.;]*|[A-Z][^\\.;]*(Gurudaspur)[^\\.;]*|[A-Z][^\\.;]*(Chilmari)[^\\.;]*|[A-Z][^\\.;]*(Nageshwari)[^\\.;]*|[A-Z][^\\.;]*(Naral)[^\\.;]*|[A-Z][^\\.;]*(Nesarabad)[^\\.;]*|[A-Z][^\\.;]*(Jhalakati)[^\\.;]*|[A-Z][^\\.;]*(Maulvi\sbazar)[^\\.;]*|[A-Z][^\\.;]*(Tungi para)[^\\.;]*|[A-Z][^\\.;]*(Bera)[^\\.;]*|[A-Z][^\\.;]*(Hajiganj)[^\\.;]*|[A-Z][^\\.;]*(Adamighi)[^\\.;]*|[A-Z][^\\.;]*(Char fasson)[^\\.;]*|[A-Z][^\\.;]*(Parbatipur)[^\\.;]*|[A-Z][^\\.;]*(Gomastapur)[^\\.;]*|[A-Z][^\\.;]*(Panchagarh)[^\\.;]*|[A-Z][^\\.;]*(Fatikchhari)[^\\.;]*|[A-Z][^\\.;]*(Kaliganj)[^\\.;]*|[A-Z][^\\.;]*(Ramu)[^\\.;]*|[A-Z][^\\.;]*(Burhanuddin)[^\\.;]*|[A-Z][^\\.;]*(Sherpur)[^\\.;]*|[A-Z][^\\.;]*(Shibganj)[^\\.;]*|[A-Z][^\\.;]*(Roypura)[^\\.;]*|[A-Z][^\\.;]*(Trishal)[^\\.;]*|[A-Z][^\\.;]*(Abhaynagar)[^\\.;]*|[A-Z][^\\.;]*(Gaurnadi)[^\\.;]*|[A-Z][^\\.;]*(Meherpur)[^\\.;]*|[A-Z][^\\.;]*(Bhanga)[^\\.;]*|[A-Z][^\\.;]*(Dohar)[^\\.;]*|[A-Z][^\\.;]*(Jhikargachha)[^\\.;]*|[A-Z][^\\.;]*(Lalmohan)[^\\.;]*|[A-Z][^\\.;]*(Gopalganj)[^\\.;]*|[A-Z][^\\.;]*(Mehendiganj)[^\\.;]*|[A-Z][^\\.;]*(Sri mangal)[^\\.;]*|[A-Z][^\\.;]*(Nilphamari)[^\\.;]*|[A-Z][^\\.;]*(Nalchiti)[^\\.;]*|[A-Z][^\\.;]*(Teknaf)[^\\.;]*|[A-Z][^\\.;]*(Kalia)[^\\.;]*|[A-Z][^\\.;]*(Phultala)[^\\.;]*|[A-Z][^\\.;]*(Nalitabari)[^\\.;]*|[A-Z][^\\.;]*(Pangsha)[^\\.;]*|[A-Z][^\\.;]*(Gafargaon)[^\\.;]*|[A-Z][^\\.;]*(Khagrachari)[^\\.;]*|[A-Z][^\\.;]*(Shailkupa)[^\\.;]*|[A-Z][^\\.;]*(Rangunia)[^\\.;]*|[A-Z][^\\.;]*(Mirzapur)[^\\.;]*|[A-Z][^\\.;]*(Sakhipur)[^\\.;]*|[A-Z][^\\.;]*(Bheramara)[^\\.;]*|[A-Z][^\\.;]*(Sarankhola)[^\\.;]*|[A-Z][^\\.;]*(Bandarban)[^\\.;]*|[A-Z][^\\.;]*(Fulbari)[^\\.;]*|[A-Z][^\\.;]*(Kotchandpur)[^\\.;]*|[A-Z][^\\.;]*(Barguna)[^\\.;]*|[A-Z][^\\.;]*(Senbagh)[^\\.;]*|[A-Z][^\\.;]*(Dhamrai)[^\\.;]*|[A-Z][^\\.;]*(Fakirhat)[^\\.;]*|[A-Z][^\\.;]*(Chhagalnaiya)[^\\.;]*|[A-Z][^\\.;]*(Bajitpur)[^\\.;]*|[A-Z][^\\.;]*(Badarganj)[^\\.;]*|[A-Z][^\\.;]*(Baniachang)[^\\.;]*|[A-Z][^\\.;]*(Ulipur)[^\\.;]*|[A-Z][^\\.;]*(Chhatak)[^\\.;]*|[A-Z][^\\.;]*(Char bhadrasan)[^\\.;]*|[A-Z][^\\.;]*(Pirganj)[^\\.;]*|[A-Z][^\\.;]*(Bhaluka)[^\\.;]*|[A-Z][^\\.;]*(Morrelganj)[^\\.;]*|[A-Z][^\\.;]*(Nabinagar)[^\\.;]*|[A-Z][^\\.;]*(Bhandaria)[^\\.;]*|[A-Z][^\\.;]*(Ramgarh)[^\\.;]*|[A-Z][^\\.;]*(Keshabpur)[^\\.;]*|[A-Z][^\\.;]*(Mathbaria)[^\\.;]*|[A-Z][^\\.;]*(Bochanganj)[^\\.;]*|[A-Z][^\\.;]*(Lohagara)[^\\.;]*|[A-Z][^\\.;]*(Itna)[^\\.;]*|[A-Z][^\\.;]*(Kutubdia)[^\\.;]*|[A-Z][^\\.;]*(Ishwarganj)[^\\.;]*|[A-Z][^\\.;]*(Raozan)[^\\.;]*|[A-Z][^\\.;]*(Domar)[^\\.;]*|[A-Z][^\\.;]*(Muktagachha)[^\\.;]*|[A-Z][^\\.;]*(Manikchhari)[^\\.;]*|[A-Z][^\\.;]*(Bhangura)[^\\.;]/gi)   
+       
+       var countCity = (text.match(BangCity) || [])
+            for (i=0; i< countCity.length; i++) {
+                alert (countCity[i])}
+     };
+     function otherLoc (){
+        alert("Bangladesh search features are being tested and Vietnam and laos will be tested afterwards")
+     };
 </script>
 </head>
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
