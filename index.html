@@ -108,10 +108,10 @@
 
 var text = document.getElementById('main').innerHTML
     function CountWords() {
-        alert("We will start by highlighting all the required search terms then we will being our search by looking for the instances of the word 'program'")
-        var text = document.getElementById('main').innerHTML;
-            var count = (text.match(/pilot/gi) || []).length;
-                alert ("the word pilot occured " + count + " times.")
+       var pilotProjectSent = /[A-Z][^\\.;]*(pilot)[^\\.;]*|[A-Z][^\\.;]*(adapt)[^\\.;]/gi
+       var count1 = (text.match(pilotProjectSent) || [])
+            for (i=0; i< count1.length; i++) {
+                alert (count1[i])}
      };
     
         function windowFind(){
