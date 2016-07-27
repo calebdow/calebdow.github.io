@@ -95,14 +95,14 @@
        var pilotProjectSent = /[A-Z][^\\.;]*(pilot)[^\\.;]*/gi
        var count1 = (text.match(pilotProjectSent) || [])
             for (i=0; i< count1.length; i++) {
-                alert ("instances of pilot: " + count1[i])}
+                alert ("Instances of pilot: " + count1[i])}
      };
     function FeasibilityWords() {
        var text = document.getElementById('main').innerHTML
        var FeasibleSent = /[A-Z][^\\.;]*(feasib)[^\\.;]*/gi
        var count2 = (text.match(FeasibleSent) || [])
             for (i=0; i< count2.length; i++) {
-                alert ("instances of feasiblility: " + count2[i])}
+                alert ("Instances of feasiblility: " + count2[i])}
      };
     
     function AddFinWords() {
@@ -110,7 +110,7 @@
        var AddFinSent = /[A-Z][^\\.;]*(?:financ(e|ing)?\W+(?:\w+\W+){0,10}?additional|additional\W+(?:\w+\W+){0,10}?financ(e|ing)?)[^\\.;]*/gi
        var count3 = (text.match(AddFinSent) || [])
             for (i=0; i< count3.length; i++) {
-                alert ("instances of additional financing: " + count3[i])}
+                alert ("Instances of additional financing: " + count3[i])}
      };
 
      function EducateWords() {
@@ -118,7 +118,7 @@
        var EducSent = /[A-Z][^\\.;]*(educat)[^\\.;]*/gi
        var count4 = (text.match(EducSent) || [])
             for (i=0; i< count4.length; i++) {
-                alert ("instances of education: " + count4[i])}
+                alert ("Instances of education: " + count4[i])}
      };
 
      function CapBuildWords() {
@@ -126,15 +126,9 @@
        var CapBuildSent = /[A-Z][^\\.;]*(?:capacity?\W+(?:\w+\W+){0,10}?buil|buil\W+(?:\w+\W+){0,10}?capacity?)[^\\.;]*/gi
        var count5 = (text.match(CapBuildSent) || [])
             for (i=0; i< count5.length; i++) {
-                alert ("instances of capacity building: " + count5[i])}
+                alert ("Instances of capacity building: " + count5[i])}
      };
 
-     function CapBuildWords() {
-       var text = document.getElementById('main').innerHTML
-       var CapBuildSent = /[A-Z][^\\.;]*(?:capacity?\W+(?:\w+\W+){0,10}?buil|buil\W+(?:\w+\W+){0,10}?capacity?)[^\\.;]*/gi
-       var count5 = (text.match(CapBuildSent) || [])
-            for (i=0; i< count5.length; i++) {
-                alert (count5[i])}
      };
      /*function TechWords() {
        alert ("this is as far as I have gotten with the sentence search function for documents. Also the technology keyword returns a ridiculous amount of sentences. We may need to rethink this one as well as the one for education and training")
@@ -181,7 +175,7 @@
         alert("Bangladesh search features are being tested and Vietnam and laos will be tested afterwards")
      };
      function coming (){
-        alert("the buttons only work until #5. The other ones are coming once I get the kinks worked out")
+        alert("The buttons only work until #5. The other ones are coming once I get the kinks worked out")
      };
 </script>
 </head>
