@@ -115,7 +115,7 @@
 
      function EducateWords() {
        var text = document.getElementById('main').innerHTML
-       var EducSent = /[A-Z][^\\.;]*(educat)[^\\.;]*/gi
+       var EducSent = /[A-Z][^\\.;]*(educate)[^\\.;]*|[A-Z][^\\.;]*(education)[^\\.;]*/
        var count4 = (text.match(EducSent) || [])
             for (i=0; i< count4.length; i++) {
                 alert ("Instances of education: " + count4[i])}
