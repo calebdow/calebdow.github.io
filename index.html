@@ -106,9 +106,10 @@
         el.innerHTML = txt; //display output in DOM
     }   
 
-var text = document.getElementById('main').innerHTML
+
     function CountWords() {
-       var pilotProjectSent = /[A-Z][^\\.;]*(pilot)[^\\.;]*|[A-Z][^\\.;]*(adapt)[^\\.;]/gi
+       var text = document.getElementById('main').innerHTML
+       var pilotProjectSent = /[A-Z][^\\.;]*(pilot)[^\\.;]*/gi
        var count1 = (text.match(pilotProjectSent) || [])
             for (i=0; i< count1.length; i++) {
                 alert (count1[i])}
