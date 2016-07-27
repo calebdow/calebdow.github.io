@@ -102,7 +102,7 @@
        var FeasibleSent = /[A-Z][^\\.;]*(feasib)[^\\.;]*/gi
        var count2 = (text.match(FeasibleSent) || [])
             for (i=0; i< count2.length; i++) {
-                alert (count2[i])}
+                alert ("instances of feasiblility: " + count2[i])}
      };
     
     function AddFinWords() {
@@ -110,15 +110,15 @@
        var AddFinSent = /[A-Z][^\\.;]*(?:financ(e|ing)?\W+(?:\w+\W+){0,10}?additional|additional\W+(?:\w+\W+){0,10}?financ(e|ing)?)[^\\.;]*/gi
        var count3 = (text.match(AddFinSent) || [])
             for (i=0; i< count3.length; i++) {
-                alert (count3[i])}
+                alert ("instances of additional financing: " + count3[i])}
      };
 
      function EducateWords() {
        var text = document.getElementById('main').innerHTML
-       var EducSent = /[A-Z][^\\.;]*(educat)[^\\.;]*|[A-Z][^\\.;]*(train)[^\\.;]*/gi
+       var EducSent = /[A-Z][^\\.;]*(educat)[^\\.;]*/gi
        var count4 = (text.match(EducSent) || [])
             for (i=0; i< count4.length; i++) {
-                alert (count4[i])}
+                alert ("instances of education: " + count4[i])}
      };
 
      function CapBuildWords() {
@@ -126,7 +126,7 @@
        var CapBuildSent = /[A-Z][^\\.;]*(?:capacity?\W+(?:\w+\W+){0,10}?buil|buil\W+(?:\w+\W+){0,10}?capacity?)[^\\.;]*/gi
        var count5 = (text.match(CapBuildSent) || [])
             for (i=0; i< count5.length; i++) {
-                alert (count5[i])}
+                alert ("instances of capacity building: " + count5[i])}
      };
 
      function CapBuildWords() {
