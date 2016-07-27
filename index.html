@@ -99,7 +99,7 @@
      };
     function FeasibilityWords() {
        var text = document.getElementById('main').innerHTML
-       var FeasibleSent = /[A-Z][^\\.;]*(feasib)[^\\.;]*|[A-Z][^\\.;]*(plann)[^\\.;]*/gi
+       var FeasibleSent = /[A-Z][^\\.;]*(feasib)[^\\.;]*/gi
        var count2 = (text.match(FeasibleSent) || [])
             for (i=0; i< count2.length; i++) {
                 alert (count2[i])}
